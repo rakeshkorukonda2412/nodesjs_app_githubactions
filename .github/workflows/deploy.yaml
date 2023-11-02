@@ -4,8 +4,15 @@ on:
     branches:
     - main
 jobs:
-  deploy-app:
+  test-app:
     runs-on: ubuntu-latest
     steps:
     - name: clone the app code
       uses: actions/checkout@v4
+    - name: run the tests
+      run: echo "run tests for the app"
+  deploy-app:
+    runs-on: ubutnu-latest
+    steps:
+    - name: deploy the code
+      run: echo "deploy the code"

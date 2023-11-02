@@ -17,3 +17,9 @@ jobs:
     steps:
     - name: deploy the code
       run: echo "deploy the code"
+  output-data:
+    needs: deploy-app
+    runs-on: ubuntu-latest
+    steps:
+    - name: get github context data
+      runs: echo "${{ toJson(github) }}"      

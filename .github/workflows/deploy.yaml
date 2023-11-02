@@ -22,4 +22,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: get github context data
-      runs: echo "${{ toJson(github) }}"      
+      run: echo "${{ toJson(github) }}"
